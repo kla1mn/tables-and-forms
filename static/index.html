@@ -10,16 +10,44 @@
     <h1>Найди себе друга!</h1>
 
     <form action="/pets/orders" method="POST">
-        <label>
-            <select id="petType">
-                <option>Кот</option>
-                <option>Собака</option>
-                <option>Капибара</option>
-                <option>Вомбат</option>
-            </select>
-        </label>
-
-
+        <p>
+            <label for="petType"> Животное
+                <select name="petType" id="petType">
+                    <option>Кот</option>
+                    <option>Собака</option>
+                    <option>Капибара</option>
+                    <option>Вомбат</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label class="radio-option"> Пол
+                <input type="radio" name="gender" id="male" value="Мальчик" checked> Мальчик
+                <input type="radio" name="gender" id="female" value="Девочка"> Девочка
+            </label>
+        </p>
+        <p>
+            <label> Цвет глаз
+                <select name="eyeColor" id="eyeColor">
+                    <option>Зеленый</option>
+                    <option>Черный</option>
+                    <option>Коричневый</option>
+                    <option>Синий</option>
+                    <option>Голубой</option>
+                    <option>Серый</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="tailLength"> Длина хвоста (от 0 до 50 см)
+                <input type="range" id="tailLength" name="tailLength" min="0" max="50" step="1" value="0">
+            </label>
+        </p>
+        <p>
+            <label for="name"> Имя
+                <input type="text" id="name" name="name" required>
+            </label>
+        </p>
         <button type="submit">Искать</button>
     </form>
 </main>
