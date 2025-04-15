@@ -11,7 +11,7 @@
 
     <form action="/pets/orders" method="POST">
         <label>
-            <select id="petType">
+            <select name="petType">
                 <option>Кот</option>
                 <option>Собака</option>
                 <option>Капибара</option>
@@ -19,6 +19,28 @@
             </select>
         </label>
 
+
+        <p>
+            <label for="date">
+                Дата рождения:<br>
+            </label>
+            <input type="date" id="date" name="dateOfBirth">
+        </p>
+
+
+        <p>
+            <label for="email">
+                Введите ваш email:<br>
+            </label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com">
+        </p>
+
+        <p>
+            <label for="phone">
+                Введите номер телефона:<br>
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-9999">
+        </p>
 
         <button type="submit">Искать</button>
     </form>
