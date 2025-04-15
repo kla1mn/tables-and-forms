@@ -10,69 +10,55 @@
     <h1>Найди себе друга!</h1>
 
     <form action="/pets/orders" method="POST">
-        <label>
-            <select name="petType">
-                <option>Кот</option>
-                <option>Собака</option>
-                <option>Капибара</option>
-                <option>Вомбат</option>
-            </select>
-        </label>
-
-
         <p>
             <label for="date">
                 Дата рождения:<br>
             </label>
-            <input type="date" id="date" name="dateOfBirth">
+            <input type="date" id="date" name="dateOfBirth" required>
         </p>
-
-
         <p>
             <label for="email">
                 Введите ваш email:<br>
             </label>
             <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
         </p>
-
         <p>
             <label for="phone">
                 Введите номер телефона:<br>
             </label>
             <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-9999" required>
         </p>
-
         <p>
             <label for="petType"> Животное
                 <select name="petType" id="petType">
-                    <option>Кот</option>
-                    <option>Собака</option>
-                    <option>Капибара</option>
-                    <option>Вомбат</option>
+                    <option id="cat" value="cat">Кот</option>
+                    <option id="dog" value="dog">Собака</option>
+                    <option id="tiger" value="tiger">Тигр</option>
                 </select>
             </label>
         </p>
         <p>
-            <label class="radio-option"> Пол
-                <input type="radio" name="gender" id="male" value="Мальчик" checked> Мальчик
-                <input type="radio" name="gender" id="female" value="Девочка"> Девочка
+            <label class="radio-option"> Пол<br>
+                <input type="radio" name="gender" id="boy" value="boy"> Мальчик
+                <input type="radio" name="gender" id="girl" value="girl"> Девочка
+                <input type="radio" name="gender" id="none" value="none"> Без разницы
             </label>
         </p>
         <p>
             <label> Цвет глаз
                 <select name="eyeColor" id="eyeColor">
-                    <option>Зеленый</option>
-                    <option>Черный</option>
-                    <option>Коричневый</option>
-                    <option>Синий</option>
-                    <option>Голубой</option>
-                    <option>Серый</option>
+                    <option value="#008000">Зеленый</option>
+                    <option value="#000000">Черный</option>
+                    <option value="#654321">Коричневый</option>
+                    <option value="#0000FF">Синий</option>
+                    <option value="#ADD8E6">Голубой</option>
+                    <option value="#808080">Серый</option>
                 </select>
             </label>
         </p>
         <p>
-            <label for="tailLength"> Длина хвоста (от 0 до 50 см)
-                <input type="range" id="tailLength" name="tailLength" min="0" max="50" step="1" value="0">
+            <label for="tailLength"> Длина хвоста (от 7 до 120 см)
+                <input type="range" id="tailLength" name="tailLength" min="7" max="120" step="1" value="7">
             </label>
         </p>
         <p>
@@ -83,7 +69,7 @@
         <p>
             <label for="rules">
                 Подтвердите согласие с правилами:
-                <input type="checkbox" id="rules" name="rules" required>
+                <input type="checkbox" id="rules" name="rules" value="true" required>
             </label>
         </p>
 
