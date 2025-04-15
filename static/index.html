@@ -9,8 +9,19 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <label>
+            <select id="petType">
+                <option>Кот</option>
+                <option>Собака</option>
+                <option>Капибара</option>
+                <option>Вомбат</option>
+            </select>
+        </label>
 
+
+        <button type="submit">Искать</button>
+    </form>
 </main>
 </body>
 </html>
